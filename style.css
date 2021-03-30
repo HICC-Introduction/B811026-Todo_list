@@ -1,0 +1,39 @@
+#Title{
+  text-align:center;
+  border:solid;
+  padding:10px;
+  margin-bottom:0;
+}
+.buttons{
+  border:solid;
+  margin:10px;
+}
+body{
+  margin:30px;
+}
+#container{
+  border:solid;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  padding:10px;
+}
+#todo{
+  border-right:solid 1px;
+  display:grid;
+  grid-template-columns: 1fr;
+}
+#done{
+  border-left:solid 1px;
+  display:grid;
+  grid-template-columns: 1fr;
+}
+.ListTitle{
+    list-style-type: none;
+}
+.content{
+  border:solid;
+  padding:5px;
+  margin:10px;
+  margin-left:0;
+  min-height:20px;
+}

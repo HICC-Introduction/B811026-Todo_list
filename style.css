@@ -4,9 +4,14 @@
   padding:10px;
   margin-bottom:0;
 }
-.buttons{
+.btn{
   border:solid;
   margin:10px;
+  padding:10px 40px;
+  background-color: skyblue;
+  font-size:20px;
+  border-radius: 12px;
+  cursor:pointer;
 }
 body{
   margin:30px;
@@ -26,14 +31,4 @@ body{
   border-left:solid 1px;
   display:grid;
   grid-template-columns: 1fr;
-}
-.ListTitle{
-    list-style-type: none;
-}
-.content{
-  border:solid;
-  padding:5px;
-  margin:10px;
-  margin-left:0;
-  min-height:20px;
 }

@@ -8,19 +8,20 @@
   </head>
   <body>
     <h1 id="Title">To do List</h1>
-    <input class="buttons" type="button" value="Add" onclick="showPopup();">
-    <input class="buttons" type="button" value="Edit" onclick="">
+    <button id="ADDbtn" onclick="addContent();">Add</button>
+    <button id="EDITbtn">Edit</button>
+    <p>
+      <input type="text" id="inputText"
+      placeholder="Input text here">
+    </p>
     <div id="container">
       <ul id="todo">
-        <li class="ListTitle">to do</li>
-        <li class="content"></li>
-        <li class="content"></li>
+        <h2>to do</h2>
       </ul>
       <ul id="done">
-        <li class="ListTitle">done</li>
-        <li class="content"></li>
-        <li class="content"></li>
+        <h2>done</h2>
       </ul>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>

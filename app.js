@@ -1,2 +1,8 @@
-function showPopup(){
-  window.open('popup.html','Add','width=400,height=300,left=100,top=50');}
+var todo = document.getElementById('todo')
+var inputText = document.getElementById('inputText');
+
+function addContent(){
+  var content = document.createElement('li');
+  content.innerText = inputText.value;
+  todo.appendChild(content);
+}

@@ -1,6 +1,6 @@
 var todo = document.getElementById('todo')
 var addBtn = document.getElementById('addBtn')
-var delBtn = document.getElementById('delBtn')
+addBtn.id = 'addBtn';
 var inputText = document.getElementById('inputText');
 
 //할일목록의 요소를 생성하는 함수
@@ -16,14 +16,17 @@ var createListItemElements = function(text){
 
   var editBtn =  document.createElement('button');
   editBtn.innerHTML = 'Edit';
+  editBtn.className = 'btn';
   //edit버튼에 함수 연결
   editBtn.addEventListener('click', editListItem);
 
   var editText = document.createElement('input');
   editText.type = 'text';
+  editText.className = 'editText';
 
   var delBtn = document.createElement('button');
   delBtn.innerHTML = 'Delete';
+  delBtn.className = 'btn'
   delBtn.id = 'delBtn';
   //delete버튼에 함수 연결
   delBtn.addEventListener('click', delListItem);
@@ -47,7 +50,6 @@ var addListItem = function(){
 
 //add버튼에 함수 연결
 addBtn.addEventListener('click', addListItem);
-
 //할일목록을 삭제하는 함수
 var delListItem = function(){
   var listItem = this.parentNode;

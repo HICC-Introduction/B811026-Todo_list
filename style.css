@@ -1,84 +1,117 @@
-h1{
-  background-color: #f2f2f2;
-  text-align:center;
-  padding:10px;
-  border:solid;
-  border-radius:15px;
-  margin-bottom:0
+HTML{
+    font-family: sans-serif;
 }
-
+h1{
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 10px;
+  border: solid;
+  border-color: #f9f9f9;
+  border-radius: 15px;
+  margin: 30px 0;
+}
+h2{
+  padding-left: 10px;
+}
 #inputText{
-  border:solid;
-  border-radius:10px;
-  font-size:25px;
-  margin:10px;
+  border: solid;
+  border-radius: 10px;
+  border-color: #f3f3f3;
+  font-size: 25px;
+  margin: 10px 0;
   width: 30%
 }
-
 #addBtn{
-  border:solid;
-  margin:10px;
-  padding:10px 15px;
-  background-color: skyblue;
-  font-size:15px;
+  border: solid;
   border-radius: 12px;
-  cursor:pointer;
+  border-color: #99ccff;
+  margin: 10px;
+  padding: 5px 15px;
+  background-color: #99ccff;
+  font-size: 15px;
+  cursor: pointer;
 }
-
+#addBtn:hover{
+  background-color: #cce6ff;
+  border-color: #cce6ff;
+  color: #404040;
+}
 .btn{
-  background-color:#f2f2f2;
-  border:solid;  margin:10px;
-  padding:10px 15px;
-  font-size:15px;
+  background-color: #cccccc;
+  border: solid;
   border-radius: 12px;
-  cursor:pointer;
+  border-color: #cccccc;
+  margin: 10px;
+  margin-right: 0;
+  padding: 5px 15px;
+  font-size: 15px;
+  color: #ffffff;
+  cursor: pointer;
 }
-
+.btn:hover{
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
+}
 body{
-  margin:30px;
+  margin: 5%;
 }
-
 #container{
-  background-color:#f2f2f2;
-  border:solid;
+  background-color: #f9f9f9;
+  border: solid;
   border-radius: 15px;
-  display:grid;
+  border-color: #f9f9f9;
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  padding:10px;
+  padding: 10px;
 }
-
 #todo{
-  border-right:solid 1px;
+  border-right: solid 1px;
 }
-
 #done{
-  border-left:solid 1px;
+  border-left: solid 1px;
+  text-decoration: line-through;
 }
-
+#done :not(label){
+  text-decoration: none;
+}
 .littleTitle{
-  display:grid;
-  padding:20px;
+  display: grid;
+  padding-left: 10px;
+  padding-bottom: 20px;
   grid-template-columns: 1fr;
 }
-
 li{
-  list-style:none;
-  padding-left:0;
+  list-style: none;
+  padding-left: 0;
 }
-
 input[type=checkbox]{
-  width:20px;
-  height:20px;
-  margin:5px;
-  margin-right:20px;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
 }
-
 label{
-  font-size:30px;
+  font-size: 20px;
+  margin: 0 15px;
+  margin-right: 30px;
 }
-
 .editText{
-  width:30%;
-  font-size:25px;
-  margin:10px;
+  width: 100px;
+  font-size: 20px;
+  color: #8c8c8c;
+  border: solid;
+  border-radius: 10px;
+  border-color: #f3f3f3;
+  margin: 10px 0;
+}
+@media(max-width:1200px){
+  #container{
+    display:block;
+  }
+  #todo{
+    border: none;
+  }
+  #done{
+    border: none;
+    border-top: solid 2px;
+  }
 }

@@ -1,15 +1,14 @@
 var todo = document.getElementById('todo')
 var addBtn = document.getElementById('addBtn')
-addBtn.id = 'addBtn';
 var inputText = document.getElementById('inputText');
 
 //할일목록의 요소를 생성하는 함수
-//각각의 요소들을 content에 appendChild하고 최종적으로 content를 return
+//각각의 요소들을 bundle에 appendChild하고 최종적으로 bundle을 return
 var createListItemElements = function(text){
-  var content = document.createElement('li');
+  var bundle = document.createElement('li');
 
-  var label = document.createElement('label');
-  label.innerHTML = text;
+  var content = document.createElement('label');
+  content.innerHTML = text;
 
   var checkbox = document.createElement('input');
   checkbox.type = 'checkBox';
@@ -31,13 +30,13 @@ var createListItemElements = function(text){
   //delete버튼에 함수 연결
   delBtn.addEventListener('click', delListItem);
 
-  content.appendChild(checkbox);
-  content.appendChild(label);
-  content.appendChild(editText);
-  content.appendChild(editBtn);
-  content.appendChild(delBtn);
+  bundle.appendChild(checkbox);
+  bundle.appendChild(content);
+  bundle.appendChild(editText);
+  bundle.appendChild(editBtn);
+  bundle.appendChild(delBtn);
 
-  return content;
+  return bundle;
 }
 
 //할일목록을 추가하는 함수
@@ -47,9 +46,9 @@ var addListItem = function(){
   ifYouClickBox(listItem,complete);
   inputText.value='';
 }
-
 //add버튼에 함수 연결
 addBtn.addEventListener('click', addListItem);
+
 //할일목록을 삭제하는 함수
 var delListItem = function(){
   var listItem = this.parentNode;
